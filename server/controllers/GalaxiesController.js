@@ -12,6 +12,7 @@ export class GalaxiesController extends BaseController {
             .get('/:id/planets', this.getGalaxyPlanets)
             .get('/:id/', this.getGalaxyMoons)
             .get('/:id', this.getGalaxySpecies)
+            //NOTE: explain line #16
             .use(Auth0Provider.getAuthorizedUserInfo)
             .post('', this.create)
             .put('/:id', this.edit)
@@ -20,7 +21,8 @@ export class GalaxiesController extends BaseController {
 
     async getAll(req, res, next) {
         try {
-
+            const galaxies = await galaxiesService.getAll(req.query)
+            return res.send(courses)
         } catch (error) {
             next(error)
         }
