@@ -30,7 +30,8 @@ export class GalaxiesController extends BaseController {
 
     async getById() {
         try {
-
+            const galaxies = await starsService.getById(req.params.id)
+            return res.send(galaxy)
         } catch (error) {
             next(error)
         }
@@ -38,7 +39,8 @@ export class GalaxiesController extends BaseController {
 
     async getGalaxyStars(req, res, next) {
         try {
-
+            const stars = await starsService.getAll({ courseId: req.params.id })
+            return res.send(stars)
         } catch (error) {
             next(error)
         }

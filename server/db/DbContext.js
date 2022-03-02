@@ -6,11 +6,11 @@ class DbContext {
   Values = mongoose.model('Value', ValueSchema);
   Account = mongoose.model('Account', AccountSchema);
   Profiles = mongoose.model('Profile', ProfileSchema, 'accounts')
-  Galaxies = mongoose.model('Galaxy'), GalaxySchema)
-  Stars = mongoose.model('Star'), StarSchema)
-  Planets = mongoose.model('Planet'), PlanetSchema);
-  Moons = mongoose.model('Moon'), MoonSchema);
-  Species = mongoose.model('Specie'), SpecieSchema)
+  // Galaxies = mongoose.model('Galaxy'), GalaxySchema)
+  // Stars = mongoose.model('Star'), StarSchema)
+  // Planets = mongoose.model('Planet'), PlanetSchema);
+  // Moons = mongoose.model('Moon'), MoonSchema);
+  // Species = mongoose.model('Specie'), SpecieSchema)
 
 }
 
